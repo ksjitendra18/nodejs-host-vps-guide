@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // routes
+app.get("/", (req, res) => {
+  res.json({ message: "Hello World" });
+});
 app.use("/todos", todosRoutes);
 
 const PORT = process.env.PORT || 3000;
